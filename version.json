@@ -1,0 +1,1 @@
+{"version": "0.35.1", "url": "https://drev.co.kr/", "portable": "https://github.com/gmlvy12/drev-site/releases/latest/download/Drev-Portable.zip", "exe": "https://github.com/gmlvy12/drev-site/releases/latest/download/Drev.exe", "app": "https://github.com/gmlvy12/drev-site/releases/latest/download/Drev-App.zip", "runtime": "py312-1", "notes": "화면이 조용해졌습니다 — 경로 축약, 버튼 정리, 설명문 접기"}
