@@ -1,0 +1,1 @@
+{"version": "0.40.1", "url": "https://drev.co.kr/", "portable": "https://github.com/gmlvy12/drev-site/releases/latest/download/Drev-Portable.zip", "exe": "https://github.com/gmlvy12/drev-site/releases/latest/download/Drev.exe", "app": "https://github.com/gmlvy12/drev-site/releases/latest/download/Drev-App.zip", "runtime": "py312-1", "notes": "전체 검토 반영 — 정션 순환·분류 오탐·합치기 범위·문구 정합"}
