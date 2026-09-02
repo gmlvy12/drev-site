@@ -1,0 +1,1 @@
+{"version": "0.36.2", "url": "https://drev.co.kr/", "portable": "https://github.com/gmlvy12/drev-site/releases/latest/download/Drev-Portable.zip", "exe": "https://github.com/gmlvy12/drev-site/releases/latest/download/Drev.exe", "app": "https://github.com/gmlvy12/drev-site/releases/latest/download/Drev-App.zip", "runtime": "py312-1", "notes": "업데이트 후 창이 멈춘 것처럼 보이던 문제 방어"}
