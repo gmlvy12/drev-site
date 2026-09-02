@@ -1,0 +1,1 @@
+{"version": "0.38.1", "url": "https://drev.co.kr/", "portable": "https://github.com/gmlvy12/drev-site/releases/latest/download/Drev-Portable.zip", "exe": "https://github.com/gmlvy12/drev-site/releases/latest/download/Drev.exe", "app": "https://github.com/gmlvy12/drev-site/releases/latest/download/Drev-App.zip", "runtime": "py312-1", "notes": "견적서 등 파일명에 없는 문서 유형을 내용으로 알아봄"}
