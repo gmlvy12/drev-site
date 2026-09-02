@@ -1,0 +1,1 @@
+{"version": "0.38.0", "url": "https://drev.co.kr/", "portable": "https://github.com/gmlvy12/drev-site/releases/latest/download/Drev-Portable.zip", "exe": "https://github.com/gmlvy12/drev-site/releases/latest/download/Drev.exe", "app": "https://github.com/gmlvy12/drev-site/releases/latest/download/Drev-App.zip", "runtime": "py312-1", "notes": "검사 중지 버튼 · 감시 폴더를 뺄 때 기록도 함께 정리"}
