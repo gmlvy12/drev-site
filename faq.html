@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>자주 묻는 질문 — Drev</title>
+<meta name="description" content="실제 사용자들이 물어본 것들 — 차단, 첫 실행, 이력 보존, 업데이트, PLC 파일 등.">
+<link rel="canonical" href="https://drev.co.kr/faq.html">
+<link rel="alternate" hreflang="ko" href="https://drev.co.kr/faq.html">
+<link rel="alternate" hreflang="en" href="https://drev.co.kr/en/faq.html">
+<link rel="alternate" hreflang="x-default" href="https://drev.co.kr/faq.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="자주 묻는 질문 — Drev">
+<meta property="og:description" content="실제 사용자들이 물어본 것들 — 차단, 첫 실행, 이력 보존, 업데이트, PLC 파일 등.">
+<meta property="og:url" content="https://drev.co.kr/faq.html">
+<meta property="og:image" content="https://drev.co.kr/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%235b6cf5'/%3E%3Cpath d='M10 22V10h6a6 6 0 0 1 0 12h-6z' fill='none' stroke='white' stroke-width='2.6' stroke-linejoin='round'/%3E%3C/svg%3E">
+<style>
+:root{--bg:#0c0e12;--bg2:#101319;--panel:#14171d;--panel2:#1a1e26;--border:#232833;
+--text:#e6e9ef;--muted:#8b93a3;--accent:#7c8cf8;--accent2:#5d6ef5;--ok:#3fb950;
+--warn:#e3b341;--bad:#f47067}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);
+font-family:'Pretendard Variable',Pretendard,'Malgun Gothic','Segoe UI',sans-serif;line-height:1.7;letter-spacing:-.01em}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1060px;margin:0 auto;padding:0 24px}
+/* ---- nav */
+nav{position:sticky;top:0;background:rgba(12,14,18,.85);backdrop-filter:blur(12px);
+border-bottom:1px solid var(--border);z-index:10}
+nav .wrap{display:flex;align-items:center;gap:26px;height:60px}
+.logo{font-weight:800;font-size:17px;letter-spacing:-.3px}
+.logo b{background:linear-gradient(90deg,var(--accent),#9db1ff);
+-webkit-background-clip:text;background-clip:text;color:transparent}
+nav a.mi{font-size:13.5px;color:var(--muted)}
+nav a.mi:hover{color:var(--text)}
+.cta{margin-left:auto;background:linear-gradient(135deg,#4f5fe6,#3b4bd6);
+color:#fff;font-weight:700;font-size:13.5px;padding:9px 18px;border-radius:10px;
+box-shadow:0 4px 16px rgba(124,140,248,.3)}
+/* ---- hero */
+.hero{padding:96px 0 70px;text-align:center;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;pointer-events:none;
+background:
+ radial-gradient(700px 340px at 50% 12%,rgba(124,140,248,.16),transparent 70%),
+ linear-gradient(rgba(124,140,248,.055) 1px,transparent 1px),
+ linear-gradient(90deg,rgba(124,140,248,.055) 1px,transparent 1px);
+background-size:auto,44px 44px,44px 44px;
+-webkit-mask-image:linear-gradient(#000 55%,transparent);
+mask-image:linear-gradient(#000 55%,transparent)}
+.badge{display:inline-block;font-size:12.5px;font-weight:700;color:var(--accent);
+background:rgba(124,140,248,.12);border:1px solid rgba(124,140,248,.35);
+padding:5px 14px;border-radius:999px;margin-bottom:22px}
+h1{font-size:clamp(30px,5vw,46px);font-weight:800;letter-spacing:-1.2px;line-height:1.25;word-break:keep-all}
+h2,h3,p,li{word-break:keep-all}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1!important;transform:none!important;transition:none!important}}
+table.comm{width:100%;border-collapse:collapse;margin:10px 0;font-size:13px}
+table.comm th,table.comm td{border:1px solid var(--border);padding:6px 8px;text-align:left;vertical-align:top}
+h1 em{font-style:normal;background:linear-gradient(90deg,var(--accent),#9db1ff);
+-webkit-background-clip:text;background-clip:text;color:transparent}
+.sub{color:var(--muted);font-size:clamp(15px,2vw,17.5px);max-width:620px;
+margin:18px auto 34px}
+.btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.btn-big{background:linear-gradient(135deg,#4f5fe6,#3b4bd6);color:#fff;
+font-weight:800;font-size:15.5px;padding:14px 30px;border-radius:12px;
+box-shadow:0 6px 24px rgba(124,140,248,.35);
+transition:transform .2s,box-shadow .2s;display:inline-block}
+.btn-big:hover{transform:translateY(-2px);box-shadow:0 10px 32px rgba(124,140,248,.5)}
+.btn-ghost{border:1px solid var(--border);background:var(--panel);color:var(--text);
+font-weight:700;font-size:15.5px;padding:14px 26px;border-radius:12px}
+.hero .note{color:var(--muted);font-size:12.5px;margin-top:14px}
+.pills{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-top:18px}
+.pill{font-size:12.5px;color:var(--muted);border:1px solid var(--border);
+background:rgba(20,23,29,.7);padding:6px 13px;border-radius:999px}
+.hero-shot{max-width:860px;margin:44px auto -10px;position:relative}
+.hero-shot::before{content:"";position:absolute;inset:12% -6% -8%;
+background:radial-gradient(60% 70% at 50% 60%,rgba(93,110,245,.22),transparent 70%);
+filter:blur(12px);z-index:0}
+.hero-shot .shot{position:relative;z-index:1;transform:perspective(1400px) rotateX(3.5deg);
+transition:transform .5s}
+.hero-shot .shot:hover{transform:perspective(1400px) rotateX(0deg)}
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .6s,transform .6s}
+.reveal.on{opacity:1;transform:none}
+/* ---- shared */
+section{padding:64px 0}
+h2{font-size:clamp(22px,3vw,30px);font-weight:800;letter-spacing:-.6px;
+text-align:center;margin-bottom:10px}
+.sec-sub{text-align:center;color:var(--muted);margin-bottom:40px;font-size:15px}
+.cards3{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+.card{background:var(--panel);border:1px solid var(--border);border-radius:16px;
+padding:26px 24px;transition:transform .25s,border-color .25s,box-shadow .25s}
+.card:hover{transform:translateY(-4px);border-color:rgba(124,140,248,.55);
+box-shadow:0 14px 40px rgba(0,0,0,.35)}
+.card .ic{width:42px;height:42px;border-radius:11px;display:flex;align-items:center;
+justify-content:center;font-size:20px;background:rgba(124,140,248,.13);
+margin-bottom:14px}
+.card h3{font-size:16.5px;margin-bottom:8px;letter-spacing:-.3px}
+.card p{color:var(--muted);font-size:13.8px}
+/* ---- steps */
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;
+counter-reset:st}
+.step{background:var(--panel);border:1px solid var(--border);border-radius:16px;
+padding:24px;position:relative}
+.step::before{counter-increment:st;content:counter(st);position:absolute;top:-14px;
+left:22px;width:30px;height:30px;border-radius:999px;display:flex;align-items:center;
+justify-content:center;font-weight:800;font-size:14px;color:#fff;
+background:linear-gradient(135deg,var(--accent),var(--accent2))}
+.step h3{font-size:15.5px;margin:6px 0 6px}
+.step p{color:var(--muted);font-size:13.5px}
+/* ---- security */
+.sec-dark{background:var(--bg2);border-top:1px solid var(--border);
+border-bottom:1px solid var(--border)}
+.slist{max-width:720px;margin:0 auto;display:grid;gap:12px}
+.srow{display:flex;gap:14px;background:var(--panel);border:1px solid var(--border);
+border-radius:14px;padding:16px 20px;align-items:flex-start}
+.srow .ok{color:var(--ok);font-weight:800;font-size:16px;flex:none;margin-top:1px}
+.srow b{display:block;font-size:14.5px}
+.srow span{color:var(--muted);font-size:13.5px}
+/* ---- shots */
+.shot{background:var(--panel);border:1px solid var(--border);border-radius:16px;
+overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.45)}
+.shot .bar{display:flex;gap:6px;padding:11px 14px;border-bottom:1px solid var(--border);
+background:var(--panel2)}
+.shot .bar i{width:10px;height:10px;border-radius:999px;background:#3a4150}
+.shot .bar i:first-child{background:#f47067}.shot .bar i:nth-child(2){background:#e3b341}
+.shot .bar i:nth-child(3){background:#3fb950}
+.shot img{display:block;width:100%}
+.shot-cap{text-align:center;color:var(--muted);font-size:13px;margin:12px 0 34px}
+/* ---- faq */
+details{background:var(--panel);border:1px solid var(--border);border-radius:14px;
+padding:16px 22px;margin-bottom:10px;max-width:760px;margin-left:auto;margin-right:auto}
+summary{cursor:pointer;font-weight:700;font-size:14.5px;list-style:none}
+summary::before{content:"▸ ";color:var(--accent)}
+details[open] summary::before{content:"▾ "}
+details p{color:var(--muted);font-size:13.8px;padding:10px 4px 2px}
+/* ---- contact */
+.form{max-width:560px;margin:0 auto;display:grid;gap:12px}
+.form input,.form textarea{width:100%;background:var(--panel);color:var(--text);
+border:1px solid var(--border);border-radius:12px;padding:13px 16px;font-size:14px;
+font-family:inherit}
+.form textarea{min-height:130px;resize:vertical}
+.form input:focus,.form textarea:focus{outline:2px solid var(--accent2);
+border-color:var(--accent)}
+.form .hint{color:var(--muted);font-size:12.5px;text-align:center}
+footer{border-top:1px solid var(--border);padding:34px 0;color:var(--muted);
+font-size:12.8px;text-align:center}
+@media (max-width:720px){nav a.mi{display:none}}
+
+/* ---- 페이지 머리 밴드 (하위 페이지, 2026-09-01) */
+.pagehead{padding:64px 0 30px;position:relative;overflow:hidden;
+ border-bottom:1px solid var(--border)}
+.pagehead::before{content:"";position:absolute;inset:0;pointer-events:none;
+ background:
+  radial-gradient(620px 240px at 50% -10%,rgba(124,140,248,.16),transparent 70%),
+  linear-gradient(rgba(124,140,248,.05) 1px,transparent 1px),
+  linear-gradient(90deg,rgba(124,140,248,.05) 1px,transparent 1px);
+ background-size:auto,44px 44px,44px 44px;
+ -webkit-mask-image:linear-gradient(#000 45%,transparent);
+ mask-image:linear-gradient(#000 45%,transparent)}
+.pagehead .wrap{position:relative}
+.pagehead h1{font-size:clamp(26px,3.6vw,38px);letter-spacing:-.9px}
+.pagehead p{color:var(--muted);margin-top:10px;font-size:15.5px;max-width:680px}
+.crumb{font-size:12.5px;color:var(--muted);margin-bottom:10px}
+.crumb a{color:var(--accent)}
+/* ---- 현재 메뉴 표시 */
+nav a.mi.on{color:var(--text);font-weight:700;position:relative}
+nav a.mi.on::after{content:"";position:absolute;left:0;right:0;bottom:-20px;
+ height:2px;background:linear-gradient(90deg,var(--accent),#9db1ff);
+ border-radius:2px}
+/* ---- 다운로드: 두 갈래를 카드로 (글 벽 → 비교해서 고르기) */
+.dlgrid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(310px,1fr));
+ max-width:900px;margin:26px auto 0;text-align:left}
+.dlcard{background:var(--panel);border:1px solid var(--border);border-radius:18px;
+ padding:26px 24px;display:flex;flex-direction:column;gap:10px;
+ transition:transform .25s,border-color .25s,box-shadow .25s}
+.dlcard:hover{transform:translateY(-3px);border-color:rgba(124,140,248,.5);
+ box-shadow:0 16px 44px rgba(0,0,0,.4)}
+.dlcard.primary{border-color:rgba(124,140,248,.55);
+ background:linear-gradient(180deg,rgba(124,140,248,.08),var(--panel))}
+.dlcard h3{font-size:18px;letter-spacing:-.3px;display:flex;align-items:center;
+ gap:8px}
+.dlcard .tagline{color:var(--muted);font-size:13.5px;min-height:38px}
+.dlcard ul{list-style:none;display:grid;gap:6px;font-size:13.2px;color:var(--muted)}
+.dlcard li::before{content:"✓ ";color:var(--ok);font-weight:700}
+.dlcard .btn-big{font-size:14.5px;padding:12px 20px;text-align:center;
+ margin-top:4px}
+.dlcard .sub{font-size:13.5px;color:var(--muted)}
+.pick{font-size:11.5px;font-weight:700;color:var(--accent);
+ background:rgba(124,140,248,.14);border:1px solid rgba(124,140,248,.35);
+ padding:3px 10px;border-radius:999px}
+.sysreq{color:var(--muted);font-size:12.5px;margin-top:20px}
+/* ---- FAQ 2열 (넓은 화면) */
+.faqgrid{display:grid;gap:0 34px;grid-template-columns:1fr}
+@media (min-width:900px){.faqgrid{grid-template-columns:1fr 1fr}}
+/* 격자 칸을 채우게 — details의 auto 여백은 격자에서 폭을 줄여버린다 */
+.faqgrid > details{max-width:none;margin-left:0;margin-right:0;
+ align-self:start}
+/* ---- 푸터 길찾기 */
+footer .flinks{display:flex;gap:16px;flex-wrap:wrap;justify-content:center;
+ margin-bottom:14px}
+footer .flinks a{color:var(--muted);font-size:13px}
+footer .flinks a:hover{color:var(--text)}
+/* ---- 모바일 */
+.menu{display:flex;align-items:center;gap:22px}
+.menu .lang{font-weight:700}
+@media (max-width:760px){
+ nav .wrap{flex-wrap:wrap;height:auto;padding-top:10px;padding-bottom:8px;gap:10px}
+ .menu{order:3;flex:0 0 100%;gap:18px;overflow-x:auto;scrollbar-width:none;
+  padding-bottom:2px}
+ .menu::-webkit-scrollbar{display:none}
+ /* 한 장짜리 시절 규칙(모바일에서 메뉴 숨김)을 되돌린다 — 이제 페이지가
+    여러 개라 메뉴가 필요하다 (2026-09-01) */
+ nav a.mi{display:inline-block;white-space:nowrap;font-size:13px}
+ nav a.cta{margin-left:auto;white-space:nowrap}
+ nav a.mi.on::after{bottom:-4px}
+ .pagehead{padding:44px 0 22px}
+ section{padding:44px 0}
+}
+</style>
+</head>
+<body>
+<nav><div class="wrap">
+<a class="logo" href="index.html"><b>Drev</b></a>
+<div class="menu"><a class="mi" href="features.html">기능</a><a class="mi" href="how.html">사용법</a><a class="mi" href="security.html">보안</a><a class="mi" href="download.html">다운로드</a><a class="mi on" href="faq.html">FAQ</a><a class="mi" href="contact.html">문의</a><a class="mi lang" href="en/index.html">English</a></div>
+<a class="cta" href="download.html">무료 다운로드</a>
+</div></nav>
+<div class="pagehead"><div class="wrap"><div class="crumb"><a href="index.html">홈</a> · 자주 묻는 질문</div><h1>자주 묻는 질문</h1><p>실제 사용자들이 물어본 것들 — 차단, 첫 실행, 이력 보존, 업데이트, PLC 파일 등.</p></div></div><section id="faq" class="sec-dark"><div class="wrap">
+<h2>자주 묻는 질문</h2>
+<p class="sec-sub">써 보신 분들이 묻는 것부터 답을 추가합니다.</p>
+<div class="faqgrid">
+<details open><summary>도면이 정말 외부로 안 나가나요?</summary>
+<p>네. 프로그램은 회사 PC 안에서만 동작하고, 산출물을 외부로 전송하는 코드가
+없습니다. 스스로 하는 인터넷 통신은 "새 버전 있나" 버전 숫자 조회 하나뿐이며(이것도 끌 수
+있습니다) — 그 외에는 사람이 [업데이트]를 눌렀을 때 GitHub에서 새 판 파일을 받는 것과,
+'의견 보내기'를 직접 눌렀을 때 적은 내용·버전·진단 줄을 보내는 것뿐입니다 (둘 다 끌 수
+있습니다). 요청하시면 보안 검토용 상세 자료(통신 목록·설치 위치·삭제 시 남는 것)를 드립니다.</p>
+<table class="comm"><tr><th>언제</th><th>어디로</th><th>무엇을</th><th>끄기</th></tr>
+<tr><td>프로그램 시작 시(자동)</td><td>drev.co.kr/version.json (HTTPS)</td><td>버전 숫자 조회</td><td>config.yaml <code>update_check: false</code></td></tr>
+<tr><td>[업데이트] 클릭 시</td><td>github.com → release-assets.githubusercontent.com</td><td>새 판 파일 내려받기</td><td>클릭하지 않으면 없음</td></tr>
+<tr><td>[의견 보내기] 클릭 시</td><td>회사 SMTP 서버(설정된 경우)</td><td>적은 내용·버전·진단 줄</td><td>SMTP 미설정이면 PC에만 저장</td></tr>
+<tr><td>검사·브리핑·확인</td><td>없음</td><td>—</td><td>—</td></tr></table>
+<p class="muted" style="font-size:13px">화면은 기본적으로 그 PC(127.0.0.1)에서만 열립니다. 메일의 확인 링크를 팀이 쓰려면
+설정에서 사내 IP로 바꿀 수 있고, 그 경우에도 사내망 밖으로는 열리지 않습니다.</p></details>
+<details><summary>설계팀이 뭘 바꿔야 하나요?</summary>
+<p>아무것도요. 지금처럼 공유폴더에 저장만 하면 됩니다. 날짜를 붙여 새 파일로
+저장하는 관행(도면_240901.pdf)도, 덮어쓰기도 모두 자동으로 인식합니다.</p></details>
+<details><summary>어떤 파일을 볼 수 있나요?</summary>
+<p>내용 비교(글자·표·그림 전/후)는 DXF·PDF·XLSX·DOCX·HWPX. DWG 원본은 이 PC에 무료
+ODA File Converter나 오토캐드가 있으면 같은 수준으로 비교하고, 없으면 파일 안의 미리보기
+그림과 변경 사실만 봅니다. 그 외 형식(한글 hwp, PLC 프로그램 등)은 확장자만 등록하면
+"언제 무엇이 바뀌었나"와 판 이력을 관리합니다.</p></details>
+<details><summary>CAD 프로그램이 있어야 하나요?</summary>
+<p>아니요. 비교와 전/후 사진은 프로그램이 자체적으로 만듭니다. 원본을 열 때만
+그 PC의 기본 프로그램(CAD 뷰어·엑셀 등)을 사용합니다. 예외는 DWG 원본 — 글자·그림 비교까지
+하려면 무료 ODA File Converter(CADian·ZWCAD 등 어느 CAD로 만든 DWG든 됨)나 오토캐드가
+그 PC에 있어야 합니다. [설정]에서 자동으로 찾습니다.</p></details>
+<details><summary>서버나 IT 인프라가 필요한가요?</summary>
+<p>아니요. 파일서버(공유폴더)에 접근되는 일반 사무용 PC 1대에 설치하면 됩니다.
+DB 서버·웹 서버·계정 체계 전부 필요 없습니다.</p></details>
+<details><summary>Drev는 무슨 뜻인가요?</summary>
+<p><b>Document Revision</b>의 줄임입니다. 도면(Drawing)의 Rev 관리에서
+출발했지만, 목표는 프로젝트에서 오가는 모든 문서 — 도면·BOM·사양서·발주서 —
+의 개정을 지키는 것입니다. 그래서 지금도 문서 유형에 독립적인 구조로
+만들어져 있습니다.</p></details>
+<details><summary>다운로드나 실행이 차단돼요</summary>
+<p><b>업무용 PC에서는 대개 그냥 됩니다.</b> 파란 SmartScreen 경고가 뜨면
+[추가 정보]→[실행]을 누르시면 됩니다.</p>
+<p>개인용으로 새로 설치한 Windows 11에는 <b>'스마트 앱 컨트롤'</b>이 켜져 있어
+서명 없는 프로그램의 실행 자체를 막습니다. 포터블판은
+Microsoft가 서명한 정식 Python 실행기로 동작하도록 만들어 이 경우에도 그대로
+실행됩니다 — 막히면 포터블판을 쓰세요.</p></details>
+<details><summary>첫 실행이 오래 걸려요 / 안 열리는 것 같아요</summary>
+<p>첫 실행은 Windows 보안 검사 때문에 1~3분 걸릴 수 있습니다 — 한 번만
+클릭하고 기다려주세요. 이후엔 몇 초면 뜹니다. 이미 실행 중일 때 또
+더블클릭하면 기존 화면이 창으로 다시 열립니다.</p></details>
+<details><summary>업데이트는 어떻게 하나요? 기존 이력은요?</summary>
+<p>프로그램 안에서 <b>버튼 하나</b>입니다. 새 버전이 나오면 화면 위에 알림이
+뜨고, [지금 업데이트]를 누르면 프로그램이 스스로 내려받아 교체하고 다시
+시작합니다 — 압축을 풀거나 폴더를 옮기실 일이 없습니다.</p>
+<p>이력·설정은 프로그램과 분리된 파일(state.db, config.yaml)에 저장되어
+업데이트·제거가 건드리지 않습니다. DB 구조가 바뀌는 업데이트도 자동
+마이그레이션되며, 주 1회 자동 백업까지 됩니다. 교체가 실패하면 이전 판
+그대로 되돌아갑니다.</p></details>
+<details><summary>첫 검사가 몇 시간씩 걸려요</summary>
+<p>정상입니다 — 첫 검사(기준선)는 서버의 모든 파일을 한 번 읽습니다.
+수만 개면 몇 시간까지 걸릴 수 있고 진행률이 화면에 표시됩니다.
+다음 검사부터는 바뀐 파일만 봐서 보통 몇 분 안에 끝납니다.</p></details>
+<details><summary>PLC 프로그램 파일도 감시되나요?</summary>
+<p>네 — [설정]의 감시 확장자에 .gxw, .xgwx 같은 확장자를 추가하면
+"언제 누가 바꿨나"(파일 수준)와 판 이력·확인·바로 열기가 됩니다.
+래더 내용 비교는 제조사 독점 포맷이라 지원 예정 항목입니다.</p></details>
+<details><summary>프로그램을 껐다 켜도 되나요? 폴더 삭제가 안 돼요</summary>
+<p>언제든 창을 닫아도 안전합니다 — 검사 중이어도 진행분은 저장되어 다음
+검사가 이어받습니다. 폴더가 안 지워지면 프로그램이 아직 실행 중인 것이니
+작업 관리자에서 Drev를 종료한 뒤 지우세요.</p></details>
+<details><summary>여러 명이 같이 볼 수 있나요?</summary>
+<p>화면은 설치된 PC에서 열리고, 팀 공유는 아침 브리핑 메일로 합니다 —
+담당자별로 프로젝트 브리핑을 받고, 확인 기록은 감시 PC의 화면에서 남깁니다
+(메일 수신자는 회신으로 알리고 담당자가 기록하는 운영). 다중 접속 웹 대시보드는
+정식판 로드맵에 있습니다.</p></details>
+<details><summary>지우면 무엇이 남나요? 여러 PC에 설치해도 되나요?</summary>
+<p>[앱 및 기능]에서 제거하면 프로그램과 자동 실행 작업(작업 스케줄러 'ProjectWatcher')이 지워지고,
+<code>%LOCALAPPDATA%\Drev</code>의 config.yaml(메일 설정·SMTP 비밀번호 포함)·state.db(이력)·briefs·backups·
+watcher.log는 남습니다. 완전히 지우려면 그 폴더를 삭제하세요. 여러 PC에 설치해도 되지만 이력은 PC마다
+따로 쌓이므로 감시 PC 1대를 권장합니다.</p></details>
+<details><summary>인터넷이 안 되는(폐쇄망) PC에서도 되나요?</summary>
+<p>네. 검사·비교·브리핑은 인터넷이 필요 없습니다. 새 버전 확인만 실패하고 조용히 건너뜁니다.
+업데이트는 다른 PC에서 받은 설치 파일을 덮어쓰면 됩니다(설정·이력은 유지).</p></details>
+<details><summary>정말 무료인가요?</summary>
+<p>베타 기간에는 전 기능 무료입니다. 베타 기간 중 설치한 판은 기간이 끝나도 계속 동작하며, 이력(state.db)은 언제나 여러분의 파일입니다. 정식판은 유료 예정이고 베타 사용자에게는 별도 조건을 안내드립니다. 사내 PC 대수 제한은 없습니다(감시 PC 1대 권장).</p></details>
+</div>
+</div></section><section class="sec-dark"><div class="wrap" style="text-align:center"><h2>지금 바로 무료로 써보세요</h2><p class="sec-sub">설치 5분 · 가입 없음 · 도면은 회사 밖으로 나가지 않습니다</p><a class="btn-big" href="download.html">무료 다운로드</a></div></section>
+<footer><div class="wrap">
+<div class="flinks"><a href="index.html">홈</a><a href="features.html">기능</a><a href="how.html">사용법</a><a href="security.html">보안</a><a href="download.html">다운로드</a><a href="faq.html">FAQ</a><a href="contact.html">문의</a><a href="en/index.html">English</a></div>
+
+Drev — Document Revision · 도면에서 시작해 모든 프로젝트 문서의 개정을 지킵니다 · 온프레미스 · 읽기 전용<br>
+문의: hello.everydayeng@gmail.com · © 2026 Drev. 사용된 오픈소스 라이선스 고지는 프로그램에 동봉되어 있습니다.<br>이 사이트는 방문자 정보를 수집하지 않습니다 — 쿠키·분석 도구 없음. 문의는 여러분의 메일 앱으로 보내지며 서버에 저장되지 않습니다.
+</div></footer>
+<script>
+(function(){
+  var els=[];
+  document.querySelectorAll("section .card,section .step,section .srow,section .shot,section details,.form,section h2,.sec-sub").forEach(function(e){e.classList.add("reveal");els.push(e);});
+  if(!("IntersectionObserver" in window)){els.forEach(function(e){e.classList.add("on");});return;}
+  var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){x.target.classList.add("on");io.unobserve(x.target);}});},{threshold:.08});
+  els.forEach(function(e){io.observe(e);});
+})();
+</script><script>
+(function(){
+  fetch("https://api.github.com/repos/gmlvy12/drev-site/releases")
+  .then(function(r){return r.json();})
+  .then(function(rel){
+    var total=0;
+    (rel||[]).forEach(function(v){(v.assets||[]).forEach(function(a){total+=a.download_count||0;});});
+    var el=document.getElementById("dl-count");
+    if(el && total>=30){el.hidden=false;
+      el.querySelector("b").textContent=total.toLocaleString();}
+  }).catch(function(){});
+})();
+</script>
+</body>
+</html>
