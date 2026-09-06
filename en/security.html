@@ -239,9 +239,10 @@ upload, no external server. Even the UI opens only on that PC (127.0.0.1).</span
 automated test scans the entire source and fails the build if a write
 command ever appears.</span></div></div>
 <div class="srow"><span class="ok">✓</span><div><b>Your data stays on your PC</b>
-<span>All history lives in a single file (state.db) in the install folder,
-with automatic weekly backups. Copying the folder is your backup and
-migration.</span></div></div>
+<span>All history lives in a single file (state.db) in the app's data folder
+(%LOCALAPPDATA%\Drev for the installer, the program folder for portable), with automatic
+weekly backups. Copying the folder is your backup and migration. The mail server password
+is stored encrypted with your Windows account (DPAPI).</span></div></div>
 <div class="srow"><span class="ok">✓</span><div><b>On its own, the only network call is a version check</b>
 <span>It fetches one tiny version file to see if an update exists (can be
 turned off) — and sends nothing else on its own. The in-app feedback form,
